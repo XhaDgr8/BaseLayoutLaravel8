@@ -1,14 +1,10 @@
 <template>
-    <div class="bg-gray-200 flex h-screen">
-        <div class="w-72 p-2">
-            <side-bar />
-        </div>
-        <div class="w-full p-2">
-            <navbar class="col-span-12 bg-gray-200 p-5"/>
-            <main >
-                <slot></slot>
-            </main>
-        </div>
+    <div class="holder">
+        <side-bar />
+        <navbar />
+        <main class="mt-28 left-area">
+            <slot></slot>
+        </main>
     </div>
 </template>
 <script>
@@ -23,4 +19,9 @@ export default defineComponent({
     },
 })
 </script>
+<style scoped>
+    .holder {
+        @apply bg-gray-200 flex min-h-screen;
+    }
+</style>
 
